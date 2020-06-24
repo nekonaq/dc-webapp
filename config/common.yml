@@ -1,0 +1,26 @@
+---
+lookup_options:
+  INSTALLED_APPS:
+    merge: unique
+
+##
+SECRET_KEY: a49c82cd-d03b-4907-96b9-a9101344ff79
+
+LANGUATE_CODE: ja
+TIME_ZONE: Asia/Tokyo
+
+INSTALLED_APPS:
+  - django.contrib.admin
+  - django.contrib.auth
+  - django.contrib.contenttypes
+  - django.contrib.sessions
+  - django.contrib.messages
+  - django.contrib.staticfiles
+  - django_extensions
+
+# LOGGING:
+#   version: 1
+#   disable_existing_loggers: false
+#   formatters:
+#     local:
+#       format: '%(asctime)s [%(levelname)s] %(pathname)s:%(lineno)d %(message)s'

@@ -1,0 +1,15 @@
+---
+version: 5
+defaults:
+  datadir: .
+  data_hash: yaml_data
+
+hierarchy:
+  - name: 'environment values'
+    paths:
+      - environment/%{environment}/base.yml
+      - environment/%{environment}/apps.yml
+      - environment/%{environment}/database.yml
+
+  - name: 'common values'
+    path: common.yml

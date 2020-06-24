@@ -1,0 +1,8 @@
+---
+required_packages:
+  - jq
+  - gettext
+  - [python3-dev, libyaml-dev, libpcre3-dev]
+  - [sqlite3, libsqlite3-dev]
+  - [mariadb-client, libmysqlclient-dev]
+  - redis-tools
