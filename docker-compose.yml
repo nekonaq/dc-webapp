@@ -5,10 +5,10 @@ services:
     image: "registry.gitlab.com/nekonaq.docker/webapp:$WEBAPP_VERSION"
     environment:
       DJANGO_PROJECT_NAME: "$COMPOSE_PROJECT_NAME"
+      DJANGO_ENVIRONMENT: "$DJANGO_ENVIRONMENT"
       EXPOSE_HTTP: $EXPOSE_HTTP
     volumes:
-      # NOTE: 設定を変更したければ以下をコメントアウトして設定ファイルを編集する。
-      # - ./config:/app/config:ro
+      - ./secrets-develop:/app/secrets-develop:ro
       - ./data:/app/data
-    command: [bin/runuwsgi, -e, local]
+    command: [bin/runuwsgi]
     network_mode: host
